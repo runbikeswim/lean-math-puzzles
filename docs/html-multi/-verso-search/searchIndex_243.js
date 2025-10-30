@@ -1,0 +1,1 @@
+window.docContents[243].resolve({"/#Lean-Mathematical-Puzzles":{"id":"/#Lean-Mathematical-Puzzles","header":"Lean Mathematical Puzzles","context":"","contents":"Each chapter explores a distinct puzzle, presented in chronological order according to its time of writing.\nThe chapters stand independently and need not be read sequentially.\n\n\n\n"}});

@@ -1,0 +1,136 @@
+{"Verso.Genre.Manual.section":
+ {"title": "Sections or chapters of the manual",
+  "description": null,
+  "contents": {}},
+ "Verso.Genre.Manual.example":
+ {"title": "Verso.Genre.Manual.example",
+  "description": null,
+  "contents":
+  {"zero_le_sq":
+   [{"id": "zero_le_sq",
+     "data":
+     {"/Quartic-Equation/#zero_le_sq":
+      {"display": "zero_le_sq",
+       "context":
+       ["Lean Mathematical Puzzles",
+        "Quartic Equation",
+        "Formal Proof in Lean",
+        "Part 2: Proving that there are no other Solutions"]}},
+     "address": "/Quartic-Equation/"}],
+   "sqrt_10_4_sqrt_10_2_2":
+   [{"id": "sqrt_10_4_sqrt_10_2_2",
+     "data":
+     {"/Quartic-Equation/#sqrt_10_4_sqrt_10_2_2":
+      {"display": "sqrt_10_4_sqrt_10_2_2",
+       "context":
+       ["Lean Mathematical Puzzles",
+        "Quartic Equation",
+        "Formal Proof in Lean",
+        "Part 1: Verifying the Solutions"]}},
+     "address": "/Quartic-Equation/"}],
+   "sqrt_10_4":
+   [{"id": "sqrt_10_4",
+     "data":
+     {"/Quartic-Equation/#sqrt_10_4":
+      {"display": "sqrt_10_4",
+       "context":
+       ["Lean Mathematical Puzzles",
+        "Quartic Equation",
+        "Formal Proof in Lean",
+        "Part 1: Verifying the Solutions"]}},
+     "address": "/Quartic-Equation/"}],
+   "sqrt_10_2":
+   [{"id": "sqrt_10_2",
+     "data":
+     {"/Quartic-Equation/#sqrt_10_2":
+      {"display": "sqrt_10_2",
+       "context":
+       ["Lean Mathematical Puzzles",
+        "Quartic Equation",
+        "Formal Proof in Lean",
+        "Part 1: Verifying the Solutions"]}},
+     "address": "/Quartic-Equation/"}],
+   "sq_eq_mul_self":
+   [{"id": "sq_eq_mul_self",
+     "data":
+     {"/Quartic-Equation/#sq_eq_mul_self":
+      {"display": "sq_eq_mul_self",
+       "context":
+       ["Lean Mathematical Puzzles",
+        "Quartic Equation",
+        "Formal Proof in Lean",
+        "Part 2: Proving that there are no other Solutions"]}},
+     "address": "/Quartic-Equation/"}],
+   "quartic_equation_solutions":
+   [{"id": "quartic_equation_solutions",
+     "data":
+     {"/Quartic-Equation/#quartic_equation_solutions":
+      {"display": "quartic_equation_solutions",
+       "context":
+       ["Lean Mathematical Puzzles",
+        "Quartic Equation",
+        "Formal Proof in Lean",
+        "Part 2: Proving that there are no other Solutions"]}},
+     "address": "/Quartic-Equation/"}],
+   "quartic_equation_simp":
+   [{"id": "quartic_equation_simp",
+     "data":
+     {"/Quartic-Equation/#quartic_equation_simp":
+      {"display": "quartic_equation_simp",
+       "context":
+       ["Lean Mathematical Puzzles",
+        "Quartic Equation",
+        "Formal Proof in Lean",
+        "Part 2: Proving that there are no other Solutions"]}},
+     "address": "/Quartic-Equation/"}],
+   "quadratic_equation_solutions_1":
+   [{"id": "quadratic_equation_solutions_1",
+     "data":
+     {"/Quartic-Equation/#quadratic_equation_solutions_1":
+      {"display": "quadratic_equation_solutions_1",
+       "context":
+       ["Lean Mathematical Puzzles",
+        "Quartic Equation",
+        "Formal Proof in Lean",
+        "Part 2: Proving that there are no other Solutions"]}},
+     "address": "/Quartic-Equation/"}],
+   "eq_add_of_neg_add_left":
+   [{"id": "eq_add_of_neg_add_left",
+     "data":
+     {"/Quartic-Equation/#eq_add_of_neg_add_left":
+      {"display": "eq_add_of_neg_add_left",
+       "context":
+       ["Lean Mathematical Puzzles",
+        "Quartic Equation",
+        "Formal Proof in Lean",
+        "Part 2: Proving that there are no other Solutions"]}},
+     "address": "/Quartic-Equation/"}],
+   "abs_eq_iff_pos_or_neg_eq'":
+   [{"id": "abs_eq_iff_pos_or_neg_eq___",
+     "data":
+     {"/Quartic-Equation/#abs_eq_iff_pos_or_neg_eq___":
+      {"display": "abs_eq_iff_pos_or_neg_eq'",
+       "context":
+       ["Lean Mathematical Puzzles",
+        "Quartic Equation",
+        "Formal Proof in Lean",
+        "Part 2: Proving that there are no other Solutions"]}},
+     "address": "/Quartic-Equation/"}]}},
+ "Verso.Genre.Manual.doc.tech":
+ {"title": "Terminology",
+  "description": "Definitions of technical terms",
+  "contents": {}},
+ "Verso.Genre.Manual.doc.tactic.conv":
+ {"title": "Conversion Tactics",
+  "description": "Tactics for performing targeted rewriting of subterms",
+  "contents": {}},
+ "Verso.Genre.Manual.doc.tactic":
+ {"title": "Tactic Documentation",
+  "description": "Detailed descriptions of tactics",
+  "contents": {}},
+ "Verso.Genre.Manual.doc.option":
+ {"title": "Compiler options", "description": null, "contents": {}},
+ "Verso.Genre.Manual.doc":
+ {"title": "Lean constant reference",
+  "description": "Documentation for Lean constants",
+  "contents": {}}}

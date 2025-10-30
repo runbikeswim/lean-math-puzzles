@@ -1,0 +1,1 @@
+window.docContents[20].resolve({"/Quartic-Equation/#Lean-Mathematical-Puzzles--Quartic-Equation":{"id":"/Quartic-Equation/#Lean-Mathematical-Puzzles--Quartic-Equation","header":"1. Quartic Equation","context":"Lean Mathematical Puzzles","contents":"This problem is stated in this youtube-video.\n\n\n\n\n\n\n\n"}});

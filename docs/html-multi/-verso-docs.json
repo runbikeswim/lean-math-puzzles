@@ -1,0 +1,157 @@
+{"99": "<code>x + 6 = -√10</code>",
+ "98": "<code>x + 6 = -√10 ∨ x + 6 = √10</code>",
+ "97":
+ "<code>eq_neg_of_add_eq_zero_left.{u_1} {G : Type u_1} [SubtractionMonoid G] {a b : G} (h : a + b = 0) : a = -b</code>",
+ "96": "<code>x + 6 = 0</code>",
+ "95": "<code>x + 6 = 0 ∨ x + 6 = -√10 ∨ x + 6 = √10</code>",
+ "94": "<code>t = x + 6</code>",
+ "93": "<code>t = 0 ∨ t = -√10 ∨ t = √10</code>",
+ "92":
+ "<code>(t - 6 + 3) * (t - 6 + 5) * (t - 6 + 7) * (t - 6 + 9) = (t - 3) * (t - 1) * (t + 1) * (t + 3)</code>",
+ "91": "<code>(t - 6 + 3) * (t - 6 + 5) * (t - 6 + 7) * (t - 6 + 9) = 9</code>",
+ "90": "<code>x = t - 6</code>",
+ "9":
+ "<code>HMul.hMul.{u, v, w} {α : Type u} {β : Type v} {γ : outParam (Type w)} [self : HMul α β γ] : α → β → γ</code><span class=\"sep\"></span><code class=\"docstring\">`a * b` computes the product of `a` and `b`.\nThe meaning of this notation is type-dependent. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `*` in identifiers is `mul`.</code>",
+ "89": "<code>(x + 3) * (x + 5) * (x + 7) * (x + 9) = 9</code>",
+ "88":
+ "<code class=\"docstring\">`linarith` attempts to find a contradiction between hypotheses that are linear (in)equalities.\nEquivalently, it can prove a linear inequality by assuming its negation and proving `False`.\n\nIn theory, `linarith` should prove any goal that is true in the theory of linear arithmetic over\nthe rationals. While there is some special handling for non-dense orders like `Nat` and `Int`,\nthis tactic is not complete for these theories and will not prove every true goal. It will solve\ngoals over arbitrary types that instantiate `CommRing`, `LinearOrder` and `IsStrictOrderedRing`.\n\nAn example:\n```lean\nexample (x y z : ℚ) (h1 : 2*x &lt; 3*y) (h2 : -4*x + 2*z &lt; 0)\n        (h3 : 12*y - 4* z &lt; 0) : False := by\n  linarith\n```\n\n`linarith` will use all appropriate hypotheses and the negation of the goal, if applicable.\nDisequality hypotheses require case splitting and are not normally considered\n(see the `splitNe` option below).\n\n`linarith [t1, t2, t3]` will additionally use proof terms `t1, t2, t3`.\n\n`linarith only [h1, h2, h3, t1, t2, t3]` will use only the goal (if relevant), local hypotheses\n`h1`, `h2`, `h3`, and proofs `t1`, `t2`, `t3`. It will ignore the rest of the local context.\n\n`linarith!` will use a stronger reducibility setting to try to identify atoms. For example,\n```lean\nexample (x : ℚ) : id x ≥ x := by\n  linarith\n```\nwill fail, because `linarith` will not identify `x` and `id x`. `linarith!` will.\nThis can sometimes be expensive.\n\n`linarith (config := { .. })` takes a config object with five\noptional arguments:\n* `discharger` specifies a tactic to be used for reducing an algebraic equation in the\n  proof stage. The default is `ring`. Other options include `simp` for basic\n  problems.\n* `transparency` controls how hard `linarith` will try to match atoms to each other. By default\n  it will only unfold `reducible` definitions.\n* If `splitHypotheses` is true, `linarith` will split conjunctions in the context into separate\n  hypotheses.\n* If `splitNe` is `true`, `linarith` will case split on disequality hypotheses.\n  For a given `x ≠ y` hypothesis, `linarith` is run with both `x &lt; y` and `x &gt; y`,\n  and so this runs linarith exponentially many times with respect to the number of\n  disequality hypotheses. (`false` by default.)\n* If `exfalso` is `false`, `linarith` will fail when the goal is neither an inequality nor `False`.\n  (`true` by default.)\n* `restrict_type` (not yet implemented in mathlib4)\n  will only use hypotheses that are inequalities over `tp`. This is useful\n  if you have e.g. both integer- and rational-valued inequalities in the local context, which can\n  sometimes confuse the tactic.\n\nA variant, `nlinarith`, does some basic preprocessing to handle some nonlinear goals.\n\nThe option `set_option trace.linarith true` will trace certain intermediate stages of the `linarith`\nroutine.\n</code>",
+ "87": "<code>x + a = b</code>",
+ "86":
+ "<code>eq_add_of_neg_add_left (x a b : ℝ) (h : x + a = b) : x = -a + b</code>",
+ "85": "<code>t = -√10 ∨ t = √10</code>",
+ "84": "<code>t ^ 2 = 0 + 10</code>",
+ "83":
+ "<code>eq_add_of_sub_eq.{u_3} {G : Type u_3} [AddGroup G] {a b c : G} (h : a - c = b) : a = b + c</code>",
+ "82": "<code>t ^ 2 - 10 = 0</code>",
+ "81": "<code>t = 0</code>",
+ "80":
+ "<code class=\"docstring\">After `with`, there is an optional tactic that runs on all branches, and\nthen a list of alternatives.\n</code>",
+ "8":
+ "<code>sq.{u_2} {M : Type u_2} [Monoid M] (a : M) : a ^ 2 = a * a</code><span class=\"sep\"></span><code class=\"docstring\">**Alias** of `pow_two`.\n\n---\n\nNote that most of the lemmas about powers of two refer to it as `sq`. </code>",
+ "79":
+ "<code class=\"docstring\">Assuming `x` is a variable in the local context with an inductive type,\n`cases x` splits the main goal, producing one goal for each constructor of the\ninductive type, in which the target is replaced by a general instance of that constructor.\nIf the type of an element in the local context depends on `x`,\nthat element is reverted and reintroduced afterward,\nso that the case split affects that hypothesis as well.\n`cases` detects unreachable cases and closes them automatically.\n\nFor example, given `n : Nat` and a goal with a hypothesis `h : P n` and target `Q n`,\n`cases n` produces one goal with hypothesis `h : P 0` and target `Q 0`,\nand one goal with hypothesis `h : P (Nat.succ a)` and target `Q (Nat.succ a)`.\nHere the name `a` is chosen automatically and is not accessible.\nYou can use `with` to provide the variables names for each constructor.\n- `cases e`, where `e` is an expression instead of a variable, generalizes `e` in the goal,\n  and then cases on the resulting variable.\n- Given `as : List α`, `cases as with | nil =&gt; tac₁ | cons a as' =&gt; tac₂`,\n  uses tactic `tac₁` for the `nil` case, and `tac₂` for the `cons` case,\n  and `a` and `as'` are used as names for the new variables introduced.\n- `cases h : e`, where `e` is a variable or an expression,\n  performs cases on `e` as above, but also adds a hypothesis `h : e = ...` to each hypothesis,\n  where `...` is the constructor instance for that particular case.\n</code>",
+ "78": "<code>t = 0 ∨ t ^ 2 - 10 = 0</code>",
+ "77":
+ "<code>pow_eq_zero_iff.{u_1} {M₀ : Type u_1} [MonoidWithZero M₀] {a : M₀} {n : ℕ} [NoZeroDivisors M₀] (hn : n ≠ 0) :\n  a ^ n = 0 ↔ a = 0</code>",
+ "76": "<code>not_false_eq_true : (¬False) = True</code>",
+ "75":
+ "<code>OfNat.ofNat_ne_zero.{u_1} {R : Type u_1} [AddMonoidWithOne R] [CharZero R] (n : ℕ) [n.AtLeastTwo] : OfNat.ofNat n ≠ 0</code>",
+ "74": "<code>ne_eq.{u_1} {α : Sort u_1} (a b : α) : (a ≠ b) = ¬a = b</code>",
+ "73":
+ "<code>mul_eq_zero.{u_1} {M₀ : Type u_1} [MulZeroClass M₀] [NoZeroDivisors M₀] {a b : M₀} : a * b = 0 ↔ a = 0 ∨ b = 0</code><span class=\"sep\"></span><code class=\"docstring\">If `α` has no zero divisors, then the product of two elements equals zero iff one of them\nequals zero. </code>",
+ "72":
+ "<code>add_eq_right.{u_4} {M : Type u_4} [AddMonoid M] [IsRightCancelAdd M] {a b : M} : a + b = b ↔ a = 0</code>",
+ "71": "<code>t ^ 2 * (t ^ 2 - 10) + 9 = 9</code>",
+ "70": "<code>(t - 3) * (t - 1) * (t + 1) * (t + 3) = 9</code>",
+ "7":
+ "<code class=\"docstring\">`rw` is like `rewrite`, but also tries to close the goal by \"cheap\" (reducible) `rfl` afterwards.\n</code>",
+ "69":
+ "<code>quartic_equation_solutions (t : ℝ) (h : (t - 3) * (t - 1) * (t + 1) * (t + 3) = 9) : t = 0 ∨ t = -√10 ∨ t = √10</code>",
+ "68":
+ "<code class=\"docstring\">Step-wise reasoning over transitive relations.\n```\ncalc\n  a = b := pab\n  b = c := pbc\n  ...\n  y = z := pyz\n```\nproves `a = z` from the given step-wise proofs. `=` can be replaced with any\nrelation implementing the typeclass `Trans`. Instead of repeating the right-\nhand sides, subsequent left-hand sides can be replaced with `_`.\n```\ncalc\n  a = b := pab\n  _ = c := pbc\n  ...\n  _ = z := pyz\n```\nIt is also possible to write the *first* relation as `&lt;lhs&gt;\\n  _ = &lt;rhs&gt; :=\n&lt;proof&gt;`. This is useful for aligning relation symbols, especially on longer:\nidentifiers:\n```\ncalc abc\n  _ = bce := pabce\n  _ = cef := pbcef\n  ...\n  _ = xyz := pwxyz\n```\n\n`calc` works as a term, as a tactic or as a `conv` tactic.\n\nSee [Theorem Proving in Lean 4][tpil4] for more information.\n\n[tpil4]: https://lean-lang.org/theorem_proving_in_lean4/quantifiers_and_equality.html#calculational-proofs\n</code>",
+ "67":
+ "<code>quartic_equation_simp (t : ℝ) : (t - 3) * (t - 1) * (t + 1) * (t + 3) = t ^ 2 * (t ^ 2 - 10) + 9</code>",
+ "66": "<code>|t| = √10</code>",
+ "65": "<code>Real.sqrt_sq_eq_abs (x : ℝ) : √(x ^ 2) = |x|</code>",
+ "64": "<code>√(t ^ 2) = √10</code>",
+ "63":
+ "<code>Real.sqrt_inj {x y : ℝ} (hx : 0 ≤ x) (hy : 0 ≤ y) : √x = √y ↔ x = y</code>",
+ "62": "<code>t ^ 2 = 10</code>",
+ "61":
+ "<code>quadratic_equation_solutions_1 (t : ℝ) (h : t ^ 2 = 10) : |t| = √10</code>",
+ "60":
+ "<code>Or.inr {a b : Prop} (h : b) : a ∨ b</code><span class=\"sep\"></span><code class=\"docstring\">`Or.inr` is \"right injection\" into an `Or`. If `h : b` then `Or.inr h : a ∨ b`. </code>",
+ "6":
+ "<code>Eq.{u_1} {α : Sort u_1} : α → α → Prop</code><span class=\"sep\"></span><code class=\"docstring\">The equality relation. It has one introduction rule, `Eq.refl`.\nWe use `a = b` as notation for `Eq a b`.\nA fundamental property of equality is that it is an equivalence relation.\n```\nvariable (α : Type) (a b c d : α)\nvariable (hab : a = b) (hcb : c = b) (hcd : c = d)\n\nexample : a = d :=\n  Eq.trans (Eq.trans hab (Eq.symm hcb)) hcd\n```\nEquality is much more than an equivalence relation, however. It has the important property that every assertion\nrespects the equivalence, in the sense that we can substitute equal expressions without changing the truth value.\nThat is, given `h1 : a = b` and `h2 : p a`, we can construct a proof for `p b` using substitution: `Eq.subst h1 h2`.\nExample:\n```\nexample (α : Type) (a b : α) (p : α → Prop)\n        (h1 : a = b) (h2 : p a) : p b :=\n  Eq.subst h1 h2\n\nexample (α : Type) (a b : α) (p : α → Prop)\n    (h1 : a = b) (h2 : p a) : p b :=\n  h1 ▸ h2\n```\nThe triangle in the second presentation is a macro built on top of `Eq.subst` and `Eq.symm`, and you can enter it by typing `\\t`.\nFor more information: [Equality](https://lean-lang.org/theorem_proving_in_lean4/quantifiers_and_equality.html#equality)\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `=` in identifiers is `eq`.</code>",
+ "59": "<code>x = y</code>",
+ "58":
+ "<code>max_eq_left_of_lt.{u_1} {α : Type u_1} [LinearOrder α] {a b : α} (h : b &lt; a) : max a b = a</code>",
+ "57": "<code>-x &lt; x</code>",
+ "56":
+ "<code>LT.lt.{u} {α : Type u} [self : LT α] : α → α → Prop</code><span class=\"sep\"></span><code class=\"docstring\">The less-than relation: `x &lt; y` \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `&lt;` in identifiers is `lt`.</code>",
+ "55": "<code>0 &lt; x</code>",
+ "54":
+ "<code>Iff.mp {a b : Prop} (self : a ↔ b) : a → b</code><span class=\"sep\"></span><code class=\"docstring\">Modus ponens for if and only if. If `a ↔ b` and `a`, then `b`. </code>",
+ "53":
+ "<code>not_le.{u_1} {α : Type u_1} [LinearOrder α] {a b : α} : ¬a ≤ b ↔ b &lt; a</code>",
+ "52":
+ "<code class=\"docstring\">`apply t at i` will use forward reasoning with `t` at the hypothesis `i`.\nExplicitly, if `t : α₁ → ⋯ → αᵢ → ⋯ → αₙ` and `i` has type `αᵢ`, then this tactic will add\nmetavariables/goals for any terms of `αⱼ` for `j = 1, …, i-1`,\nthen replace the type of `i` with `αᵢ₊₁ → ⋯ → αₙ` by applying those metavariables and the\noriginal `i`.\n</code>",
+ "51":
+ "<code>Not (a : Prop) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`Not p`, or `¬p`, is the negation of `p`. It is defined to be `p → False`,\nso if your goal is `¬p` you can use `intro h` to turn the goal into\n`h : p ⊢ False`, and if you have `hn : ¬p` and `h : p` then `hn h : False`\nand `(hn h).elim` will prove anything.\nFor more information: [Propositional Logic](https://lean-lang.org/theorem_proving_in_lean4/propositions_and_proofs.html#propositional-logic)\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `¬` in identifiers is `not`.</code>",
+ "50": "<code>¬x ≤ 0</code>",
+ "5":
+ "<code>HPow.hPow.{u, v, w} {α : Type u} {β : Type v} {γ : outParam (Type w)} [self : HPow α β γ] : α → β → γ</code><span class=\"sep\"></span><code class=\"docstring\">`a ^ b` computes `a` to the power of `b`.\nThe meaning of this notation is type-dependent. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `^` in identifiers is `pow`.</code>",
+ "49":
+ "<code>Or.inl {a b : Prop} (h : a) : a ∨ b</code><span class=\"sep\"></span><code class=\"docstring\">`Or.inl` is \"left injection\" into an `Or`. If `h : a` then `Or.inl h : a ∨ b`. </code>",
+ "48":
+ "<code class=\"docstring\">`exact e` closes the main goal if its target type matches that of `e`.\n</code>",
+ "47": "<code>x = -y</code>",
+ "46":
+ "<code>neg_eq_iff_eq_neg.{u_3} {G : Type u_3} [InvolutiveNeg G] {a b : G} : -a = b ↔ a = -b</code>",
+ "45": "<code>-x = y</code>",
+ "44":
+ "<code>Max.max.{u} {α : Type u} [self : Max α] : α → α → α</code><span class=\"sep\"></span><code class=\"docstring\">Returns the greater of its two arguments. </code>",
+ "43": "<code>max x (-x) = y</code>",
+ "42":
+ "<code class=\"docstring\">Location specifications are used by many tactics that can operate on either the\nhypotheses or the goal. It can have one of the forms:\n* 'empty' is not actually present in this syntax, but most tactics use\n  `(location)?` matchers. It means to target the goal only.\n* `at h₁ ... hₙ`: target the hypotheses `h₁`, ..., `hₙ`\n* `at h₁ h₂ ⊢`: target the hypotheses `h₁` and `h₂`, and the goal\n* `at *`: target all hypotheses and the goal\n</code>",
+ "41":
+ "<code class=\"docstring\">* `unfold id` unfolds all occurrences of definition `id` in the target.\n* `unfold id1 id2 ...` is equivalent to `unfold id1; unfold id2; ...`.\n* `unfold id at h` unfolds at the hypothesis `h`.\n\nDefinitions can be either global or local definitions.\n\nFor non-recursive global definitions, this tactic is identical to `delta`.\nFor recursive global definitions, it uses the \"unfolding lemma\" `id.eq_def`,\nwhich is generated for each recursive definition, to unfold according to the recursive definition given by the user.\nOnly one level of unfolding is performed, in contrast to `simp only [id]`, which unfolds definition `id` recursively.\n</code>",
+ "40": "<code>x ≤ 0</code>",
+ "4":
+ "<code class=\"docstring\">`by tac` constructs a term of the expected type by running the tactic(s) `tac`. </code>",
+ "39":
+ "<code class=\"docstring\">In tactic mode, `if h : t then tac1 else tac2` can be used as alternative syntax for:\n```\nby_cases h : t\n· tac1\n· tac2\n```\nIt performs case distinction on `h : t` or `h : ¬t` and `tac1` and `tac2` are the subproofs.\n\nYou can use `?_` or `_` for either subproof to delay the goal to after the tactic, but\nif a tactic sequence is provided for `tac1` or `tac2` then it will require the goal to be closed\nby the end of the block.\n</code>",
+ "38":
+ "<code>Neg.neg.{u} {α : Type u} [self : Neg α] : α → α</code><span class=\"sep\"></span><code class=\"docstring\">`-a` computes the negative or opposite of `a`.\nThe meaning of this notation is type-dependent. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `-` in identifiers is `neg` (when used as a unary operator).</code>",
+ "37":
+ "<code>abs.{u_1} {α : Type u_1} [Lattice α] [AddGroup α] (a : α) : α</code><span class=\"sep\"></span><code class=\"docstring\">`abs a`, denoted `|a|`, is the absolute value of `a` </code>",
+ "36": "<code>|x| = y</code>",
+ "35":
+ "<code>abs_eq_iff_pos_or_neg_eq' (x y : ℝ) (h : |x| = y) : x = -y ∨ x = y</code>",
+ "34":
+ "<code class=\"docstring\">`assumption` tries to solve the main goal using a hypothesis of compatible type, or else fails.\nNote also the `‹t›` term notation, which is a shorthand for `show t by assumption`.\n</code>",
+ "33":
+ "<code>Or (a b : Prop) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`Or a b`, or `a ∨ b`, is the disjunction of propositions. There are two\nconstructors for `Or`, called `Or.inl : a → a ∨ b` and `Or.inr : b → a ∨ b`,\nand you can use `match` or `cases` to destruct an `Or` assumption into the\ntwo cases.\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `∨` in identifiers is `or`.\n\n * The recommended spelling of `\\/` in identifiers is `or` (prefer `∨` over `\\/`).</code>",
+ "32":
+ "<code>And (a b : Prop) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`And a b`, or `a ∧ b`, is the conjunction of propositions. It can be\nconstructed and destructed like a pair: if `ha : a` and `hb : b` then\n`⟨ha, hb⟩ : a ∧ b`, and if `h : a ∧ b` then `h.left : a` and `h.right : b`.\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `∧` in identifiers is `and`.\n\n * The recommended spelling of `/\\` in identifiers is `and` (prefer `∧` over `/\\`).</code>",
+ "31":
+ "<code>mul_nonneg_iff.{u} {R : Type u} [Semiring R] [LinearOrder R] {a b : R} [ExistsAddOfLE R] [MulPosStrictMono R]\n  [PosMulStrictMono R] [AddLeftReflectLE R] [AddLeftMono R] : 0 ≤ a * b ↔ 0 ≤ a ∧ 0 ≤ b ∨ a ≤ 0 ∧ b ≤ 0</code>",
+ "30": "<code></code>",
+ "3": "<code>ℕ</code>",
+ "29":
+ "<code>le_total.{u_1} {α : Type u_1} [LinearOrder α] (a b : α) : a ≤ b ∨ b ≤ a</code>",
+ "28":
+ "<code class=\"docstring\">`apply e` tries to match the current goal against the conclusion of `e`'s type.\nIf it succeeds, then the tactic returns as many subgoals as the number of premises that\nhave not been fixed by type inference or type class resolution.\nNon-dependent premises are added before dependent ones.\n\nThe `apply` tactic uses higher-order pattern matching, type class resolution,\nand first-order unification with dependent types.\n</code>",
+ "27": "<code>0 ≤ t ∨ t ≤ 0</code>",
+ "26":
+ "<code class=\"docstring\">The `have` tactic is for adding hypotheses to the local context of the main goal.\n* `have h : t := e` adds the hypothesis `h : t` if `e` is a term of type `t`.\n* `have h := e` uses the type of `e` for `t`.\n* `have : t := e` and `have := e` use `this` for the name of the hypothesis.\n* `have pat := e` for a pattern `pat` is equivalent to `match e with | pat =&gt; _`,\n  where `_` stands for the tactics that follow this one.\n  It is convenient for types that have only one applicable constructor.\n  For example, given `h : p ∧ q ∧ r`, `have ⟨h₁, h₂, h₃⟩ := h` produces the\n  hypotheses `h₁ : p`, `h₂ : q`, and `h₃ : r`.\n* The syntax `have (eq := h) pat := e` is equivalent to `match h : e with | pat =&gt; _`,\n  which adds the equation `h : e = pat` to the local context.\n\nThe tactic supports all the same syntax variants and options as the `have` term.\n</code>",
+ "25": "<code>zero_le_sq (t : ℝ) : 0 ≤ t ^ 2</code>",
+ "24": "<code>sq_eq_mul_self (t : ℝ) : t ^ 2 = t * t</code>",
+ "23": "<code>x = -6 + √10</code>",
+ "22":
+ "<code class=\"docstring\">Simplification tactic for expressions in the language of commutative (semi)rings,\nwhich rewrites all ring expressions into a normal form.\n* `ring_nf!` will use a more aggressive reducibility setting to identify atoms.\n* `ring_nf (config := cfg)` allows for additional configuration:\n  * `red`: the reducibility setting (overridden by `!`)\n  * `zetaDelta`: if true, local let variables can be unfolded (overridden by `!`)\n  * `recursive`: if true, `ring_nf` will also recurse into atoms\n* `ring_nf` works as both a tactic and a conv tactic.\n  In tactic mode, `ring_nf at h` can be used to rewrite in a hypothesis.\n\nThis can be used non-terminally to normalize ring expressions in the goal such as\n`⊢ P (x + x + x)` ~&gt; `⊢ P (x * 3)`, as well as being able to prove some equations that\n`ring` cannot because they involve ring reasoning inside a subterm, such as\n`sin (x + y) + sin (y + x) = 2 * sin (x + y)`.\n</code>",
+ "21":
+ "<code>HSub.hSub.{u, v, w} {α : Type u} {β : Type v} {γ : outParam (Type w)} [self : HSub α β γ] : α → β → γ</code><span class=\"sep\"></span><code class=\"docstring\">`a - b` computes the difference of `a` and `b`.\nThe meaning of this notation is type-dependent.\n* For natural numbers, this operator saturates at 0: `a - b = 0` when `a ≤ b`. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `-` in identifiers is `sub` (when used as a binary operator).</code>",
+ "20": "<code>x = -6 - √10</code>",
+ "2": "<code>ℝ</code>",
+ "19":
+ "<code>HAdd.hAdd.{u, v, w} {α : Type u} {β : Type v} {γ : outParam (Type w)} [self : HAdd α β γ] : α → β → γ</code><span class=\"sep\"></span><code class=\"docstring\">`a + b` computes the sum of `a` and `b`.\nThe meaning of this notation is type-dependent. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `+` in identifiers is `add`.</code>",
+ "18":
+ "<code>Real : Type</code><span class=\"sep\"></span><code class=\"docstring\">The type `ℝ` of real numbers constructed as equivalence classes of Cauchy sequences of rational\nnumbers. </code>",
+ "17": "<code>x = -6</code>",
+ "16": "<code>sqrt_10_4 : √10 ^ 4 = 100</code>",
+ "15":
+ "<code class=\"docstring\">Tactic for evaluating expressions in *commutative* (semi)rings, allowing for variables in the\nexponent. If the goal is not appropriate for `ring` (e.g. not an equality) `ring_nf` will be\nsuggested.\n\n* `ring!` will use a more aggressive reducibility setting to determine equality of atoms.\n* `ring1` fails if the target is not an equality.\n\nFor example:\n```\nexample (n : ℕ) (m : ℤ) : 2^(n+1) * m = 2 * 2^n * m := by ring\nexample (a b : ℤ) (n : ℕ) : (a + b)^(n + 2) = (a^2 + b^2 + a * b + b * a) * (a + b)^n := by ring\nexample (x y : ℕ) : x + id y = y + id x := by ring!\nexample (x : ℕ) (h : x * 2 &gt; 5): x + x &gt; 5 := by ring; assumption -- suggests ring_nf\n```\n</code>",
+ "14": "<code>sqrt_10_4_sqrt_10_2_2 : √10 ^ 4 = √10 ^ 2 * √10 ^ 2</code>",
+ "13":
+ "<code class=\"docstring\">The `simp` tactic uses lemmas and hypotheses to simplify the main goal target or\nnon-dependent hypotheses. It has many variants:\n- `simp` simplifies the main goal target using lemmas tagged with the attribute `[simp]`.\n- `simp [h₁, h₂, ..., hₙ]` simplifies the main goal target using the lemmas tagged\n  with the attribute `[simp]` and the given `hᵢ`'s, where the `hᵢ`'s are expressions.-\n- If an `hᵢ` is a defined constant `f`, then `f` is unfolded. If `f` has equational lemmas associated\n  with it (and is not a projection or a `reducible` definition), these are used to rewrite with `f`.\n- `simp [*]` simplifies the main goal target using the lemmas tagged with the\n  attribute `[simp]` and all hypotheses.\n- `simp only [h₁, h₂, ..., hₙ]` is like `simp [h₁, h₂, ..., hₙ]` but does not use `[simp]` lemmas.\n- `simp [-id₁, ..., -idₙ]` simplifies the main goal target using the lemmas tagged\n  with the attribute `[simp]`, but removes the ones named `idᵢ`.\n- `simp at h₁ h₂ ... hₙ` simplifies the hypotheses `h₁ : T₁` ... `hₙ : Tₙ`. If\n  the target or another hypothesis depends on `hᵢ`, a new simplified hypothesis\n  `hᵢ` is introduced, but the old one remains in the local context.\n- `simp at *` simplifies all the hypotheses and the target.\n- `simp [*] at *` simplifies target and all (propositional) hypotheses using the\n  other hypotheses.\n</code>",
+ "12":
+ "<code>LE.le.{u} {α : Type u} [self : LE α] : α → α → Prop</code><span class=\"sep\"></span><code class=\"docstring\">The less-equal relation: `x ≤ y` \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `≤` in identifiers is `le`.\n\n * The recommended spelling of `&lt;=` in identifiers is `le` (prefer `≤` over `&lt;=`).</code>",
+ "11": "<code>Real.mul_self_sqrt {x : ℝ} (h : 0 ≤ x) : √x * √x = x</code>",
+ "101": "<code>x + 6 = √10</code>",
+ "100": "<code>x = -6 + -√10</code>",
+ "10":
+ "<code class=\"docstring\">The `let` tactic is for adding definitions to the local context of the main goal.\n* `let x : t := e` adds the definition `x : t := e` if `e` is a term of type `t`.\n* `let x := e` uses the type of `e` for `t`.\n* `let : t := e` and `let := e` use `this` for the name of the hypothesis.\n* `let pat := e` for a pattern `pat` is equivalent to `match e with | pat =&gt; _`,\n  where `_` stands for the tactics that follow this one.\n  It is convenient for types that let only one applicable constructor.\n  For example, given `p : α × β × γ`, `let ⟨x, y, z⟩ := p` produces the\n  local variables `x : α`, `y : β`, and `z : γ`.\n* The syntax `let (eq := h) pat := e` is equivalent to `match h : e with | pat =&gt; _`,\n  which adds the equation `h : e = pat` to the local context.\n\nThe tactic supports all the same syntax variants and options as the `let` term.\n</code>",
+ "1":
+ "<code>Real.sqrt (x : ℝ) : ℝ</code><span class=\"sep\"></span><code class=\"docstring\">The square root of a real number. This returns 0 for negative inputs.\n\nThis has notation `√x`. Note that `√x⁻¹` is parsed as `√(x⁻¹)`. </code>",
+ "0": "<code>sqrt_10_2 : √10 ^ 2 = 10</code>"}
