@@ -1,3 +1,8 @@
+/-
+Copyright (c) 2025 Stefan Kusterer. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.txt.
+-/
+
 import Mathlib.Tactic
 import Mathlib.Data.Real.Sqrt
 import Mathlib.Data.EReal.Inv
@@ -171,7 +176,7 @@ lemma quadratic_equation_solutions_1 (t : ℝ)
   exact h
 ```
 
-Show that for $`t \in \mathbb{R}`, the values of expressions
+Show that for $`t \in \R`, the values of expressions
 $`(t - 3) \cdot (t - 1) \cdot (t + 1) \cdot (t + 3)`
 and
 $`t^2 \cdot (t^2 - 10) + 9` are equal.
@@ -193,7 +198,7 @@ lemma quartic_equation_simp (t : ℝ) :
     _ = t ^ 2 * (t ^ 2 - 10) + 9:= by ring
 ```
 
-Show that for $`t \in \mathbb{R}` with
+Show that for $`t \in \R` with
 $`(t - 3) \cdot (t - 1) \cdot (t + 1) \cdot (t + 3) = 9`,
 $`t = 0 \lor t = - \sqrt{10} \lor t = \sqrt{10}` holds true.
 

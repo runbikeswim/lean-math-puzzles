@@ -1,0 +1,1 @@
+window.docContents[24].resolve({"/Linear-Equation/#Lean-Mathematical-Puzzles--Linear-Equation":{"id":"/Linear-Equation/#Lean-Mathematical-Puzzles--Linear-Equation","header":"2. Linear Equation","context":"Lean Mathematical Puzzles","contents":"This problem is stated in this youtube-video.\n\n\n\n\n\n\n\n"}});

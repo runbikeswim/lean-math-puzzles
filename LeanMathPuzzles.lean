@@ -2,6 +2,7 @@ import VersoManual
 import Verso.Output.Html
 import LeanMathPuzzles.Basic
 import LeanMathPuzzles.Problem_001
+import LeanMathPuzzles.Problem_002
 
 open Verso.Genre Manual
 
@@ -15,3 +16,4 @@ Each chapter explores a distinct puzzle, presented in chronological order accord
 The chapters stand independently and need not be read sequentially.
 
 {include 1 LeanMathPuzzles.Problem_001}
+{include 1 LeanMathPuzzles.Problem_002}

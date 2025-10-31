@@ -1,0 +1,1 @@
+window.docContents[37].resolve({"/Linear-Equation/#Lean-Mathematical-Puzzles--Linear-Equation--Problem-Statement":{"id":"/Linear-Equation/#Lean-Mathematical-Puzzles--Linear-Equation--Problem-Statement","header":"2.1. Problem Statement","context":"Lean Mathematical Puzzles\u0009Linear Equation","contents":"Find all a \\in \\R that solves the equation a / 19 = -a.\n\n"}});
