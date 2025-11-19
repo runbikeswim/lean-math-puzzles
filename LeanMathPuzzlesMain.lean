@@ -12,4 +12,4 @@ def config : Config where
   emitHtmlMulti := true
   htmlDepth := 1
 
-def main := manualMain (%doc LeanMathPuzzles) (config := config.addKaTeX)
+def main := manualMain (%doc LeanMathPuzzles) (config := config)
